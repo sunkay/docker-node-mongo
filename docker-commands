@@ -1,0 +1,8 @@
+#check env variables for an image
+docker run --rm mongo env
+
+docker volume ls -f dangling=true
+
+docker run -ti --rm dockernodemongo_web /bin/bash
+
+docker run -ti --rm --volumes-from mongo-db-data busybox
